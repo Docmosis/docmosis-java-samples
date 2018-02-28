@@ -2,10 +2,10 @@
 
 Welcome to Docmosis, we hope you find it useful.
 
-Please contact [support@docmosis.com](support@docmosis.com) at any
-time if you need help.
+Please contact [support@docmosis.com](mailto:support@docmosis.com) at
+any time if you need help.
 
-This ZIP contains:
+This samples contains:
 
  * DocmosisConfigFiles.java
  * WelcomeTemplate.doc
@@ -18,7 +18,7 @@ This ZIP contains:
 
 ## Getting Started
 
-**1. Start a Free Trial to receive a License Key via email**
+### 1. Start a Free Trial to receive a License Key via email
 
 Visit: https://www.docmosis.com/try/docmosis-java.html
 
@@ -34,7 +34,7 @@ these lines:
     docmosis.site=XXXXXXXXXXXXXXXX
 
 
-**2. Download the latest Docmosis-Java Software**
+### 2. Download the latest Docmosis-Java Software
 
 Visit: https://www.docmosis.com/resources/docmosis-java.html
 
@@ -45,7 +45,7 @@ Add the jars from the ZIP to your Java project. The essential jar is
 the docmosis.jar (eg: docmosis4.0.3.jar).
 
 
-**3. Install OpenOffice or LibreOffice**
+### 3. Install OpenOffice or LibreOffice
 
 You should download and install a verion of OpenOffice or LibreOffice.
 
@@ -65,7 +65,7 @@ replacing:
     docmosis.openoffice.location=XXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
 
-**4. Move the docmosis.properties and converterPoolConfig.xml files**
+### 4. Move the docmosis.properties and converterPoolConfig.xml files
 
 Docmosis will look for the docmosis.properties and
 converterPoolConfig.xml file in the root directory of your CLASSPATH
@@ -77,7 +77,7 @@ these files will typically be copied with your class files to a
 separate build/bin folder.
 
 
-**5. Copy the WelcomeTemplate.doc to the "current" directory**
+### 5. Copy the WelcomeTemplate.doc to the "current" directory
 
 This sample code looks for the template in the "current" directory
 from where the code is run.
@@ -89,14 +89,14 @@ If you run the sample code it will tell you where it is looking for
 the WelcomeTemplate.doc file, if it can't find it.
 
 
-**6. Create your document**
+### 6. Create your document
 
-Run the DocmosisConfigFiles.java.  If you have set up the above steps
+Run the DocmosisConfigFiles.java. If you have set up the above steps
 correctly, DocmosisConfigFiles.java it will generate a PDF file based
 on the WelcomeTemplate.doc.
 
 
-**7. Next Steps**
+### 7. Next Steps
 
 Try modifying the template or the data to see the effect.
 
@@ -109,12 +109,11 @@ You will find more code samples and document examples on our website.
 
 ## Troubleshooting
 
-Please contact [support@docmosis.com](support@docmosis.com) at any
-time if you need help getting your environment set up correctly.
+Please contact [support@docmosis.com](mailto:support@docmosis.com) at
+any time if you need help getting your environment set up correctly.
 
 
-
-## 32BIT vs 64BIT
+## 32 Bit vs 64 Bit
 
 If you installed a 32 bit version of OpenOffice or LibreOffice then
 you will need a 32 bit version of Java to use Docmosis.
@@ -129,7 +128,7 @@ should try the [Remote Render](../RemoteRender) example.
 That example explains how Docmosis can run in two parts: Core and
 Converter.
 
-The Core is Docmosis embedded in your application.  The Converter is a
+The Core is Docmosis embedded in your application. The Converter is a
 separate Docmosis process that leverages the OpenOffice/LibreOffice
 install. The converters can be run separately from your main
 application and resolves the 32 bit/64 bit mismatch.

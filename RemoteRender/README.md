@@ -2,8 +2,8 @@
 
 Welcome to Docmosis, we hope you find it useful.
 
-Please contact [support@docmosis.com](support@docmosis.com) at any
-time if you need help.
+Please contact [support@docmosis.com](mailto:support@docmosis.com) at
+any time if you need help.
 
 This sample contains:
 
@@ -14,9 +14,10 @@ This sample contains:
  * docmosis.properties
  * README.md (this file)
 
+
 ## Getting Started
 
-**1. Start a Free Trial to receive a License Key via email**
+### 1. Start a Free Trial to receive a License Key via email
 
 Visit: https://www.docmosis.com/try/docmosis-java.html
 
@@ -32,18 +33,19 @@ this line:
 String key = new String("XXXX-XXXX-XXXX-XXXX-XXXX-XXXX-XXXX-XXXX-XXXX-X-XXXX");
 ```
 
-**2. Download the latest Docmosis-Java Software**
+
+### 2. Download the latest Docmosis-Java Software
 
 Visit: https://www.docmosis.com/resources/docmosis-java.html
 
 Download the Docmosis-Java [ZIP] to get the latest Software and
 Documentation.
 
-Add the jars from the ZIP to your Java project.  The essential jar is
+Add the jars from the ZIP to your Java project. The essential jar is
 the docmosis.jar (eg: docmosis4.0.3.jar).
 
 
-**3. Install OpenOffice or LibreOffice**
+### 3. Install OpenOffice or LibreOffice
 
 You should download and install a version of OpenOffice or
 LibreOffice.
@@ -64,7 +66,7 @@ replacing:
     docmosis.openoffice.location=XXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
 
-**4. Copy the WelcomeTemplate.doc to the "current" directory**
+### 4. Copy the WelcomeTemplate.doc to the "current" directory
 
 This sample code looks for the template in the "current" directory
 from where the code is run.
@@ -74,9 +76,9 @@ directory for your project.
 
 If you run the sample code it will tell you where it is looking for
 the WelcomeTemplate.doc file, if it can't find it.
- 
 
-**5. Setup a Remote Converter**
+
+### 5. Setup a Remote Converter
 
 You can run a remote converter using the runConverter scripts
 provided.
@@ -84,7 +86,7 @@ provided.
 A remote converter can isolate your application from
 OpenOffice/LibreOffice dependencies as well as allow for load
 distribution.
- 
+
 The runConverter script needs the docmosis.jar and the
 docmosis.properties file in the same directory as the script.
 
@@ -96,7 +98,7 @@ docmosis.properties file in the same directory as the script.
 
 Edit the runConverter script to make sure you are using the correct
 version of Java.
- 
+
 The version of Java you choose should match the install of
 OpenOffice/LibreOffice as follows:
 
@@ -107,24 +109,24 @@ OpenOffice/LibreOffice as follows:
     use a 64Bit version of Java.
 
 
-**6. Start the Remote Converter**
+### 6. Start the Remote Converter
 
 When the runConverter script launches successfully, it will report
 that the converter is running and listening on port 2100.
 
-You can use any port.  If you would like to use a different port, you
+You can use any port. If you would like to use a different port, you
 will need to update both the runConverter script and the
 RemoteRender.java code.
 
 
-**7. Create your document**
+### 7. Create your document
 
 If you have set up the above steps correctly, when you run
 RemoteRender.java it will connect to the remote converter and generate
 a PDF file based on the WelcomeTemplate.doc.
 
 
-**8. Next Steps**
+### 8. Next Steps
 
 Try running the remote converter on a different computer on your
 network.
@@ -134,8 +136,9 @@ You will find more code samples and document examples on our website.
 
 ## Troubleshooting
 
-Please contact [support@docmosis.com](support@docmosis.com) at any
-time if you need help getting your environment set up correctly.
+Please contact [support@docmosis.com](mailto:support@docmosis.com) at
+any time if you need help getting your environment set up correctly.
+
 
 
 
