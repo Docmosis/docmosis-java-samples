@@ -1,0 +1,102 @@
+<!--
+*
+* This file is an example configuration for a pool of Docmosis converters.
+*
+* The pool is divided into "groups" in any desired arrangement and an "instance" may be
+* requested from a particular group.
+* 
+* Instances may be "embedded" or "remote".
+*
+* Embedded converters are launched automatically and managed, but they also
+* can't be offloaded to another host.
+* A group of embedded converters can be defined by setting:
+*   officeConverterClass="embedded"
+* Then you can specify the number of embedded converters like this:
+*   <instance count="X"/>
+*
+* Remote converters are useful because they can move the processing load and the
+* OpenOffice/LibreOffice dependancy to other hosts and can be easily shutdown and
+* started to correct anomalies or changing the pool structure.
+* A group of remote converters can be defined by setting:
+*   officeConverterClass="remote"
+* Each instance of a remote converter is defined using this line:
+*   <instance hostname="XXXX" port="XXXX"/>
+*
+*
+* Groups can be conditionally enabled using the attribute "enableOnlyIfSysPropSet"
+* (see the example down the bottom).
+*
+-->
+
+
+<!--
+*
+* Define a Converter pool with the default group set to "groupOne".
+*
+* Docmosis will use converters from the default group unless you set a group using:
+*   com.docmosis.document.converter.ConversionInstruction.setConverterGroupName
+*
+-->
+
+<converter-pool defaultGroup="groupOne">
+
+
+<!--
+*
+* Define a group named "groupOne" which is a group of remote converters.
+*
+-->
+  <group name="groupOne" description="Converter group using only remote converters"
+         officeConverterClass="remote">
+
+    <instance hostname="localhost" port="2100"/>
+
+<!--
+*
+* Add more <instance> lines to run more remote coverters.
+*
+*   <instance hostname="localhost" port="2101"/>
+*   <instance hostname="localhost" port="2102"/>
+*
+-->
+
+</group>
+
+
+<!--
+*
+*  Define a group named "groupTwo" which is a group of embedded converters.
+*
+-->
+
+  <group name="groupTwo" description="Converter group using only embedded converters"
+         officeConverterClass="embedded">
+
+    <instance count="1"/>
+
+  </group>
+
+
+<!--
+*
+* Example of a group that is activated depending on the value of a System property.
+*
+* The system property must be set before the call to SystemManager.initialise().
+*
+* In this example, this group will only initialise if the Java System Property
+* "application.env" is set to "uat".  This can be set for any group using the
+* attribute "enableOnlyIfSysPropSet" as shown.
+*
+
+  <group name="groupUAT" description="Remote converter used only for UAT"
+         officeConverterClass="remote"
+         enableOnlyIfSysPropSet="application.env=uat">
+
+     <instance hostname="localhost" port="2100"/>
+
+  </group>
+
+-->
+
+</converter-pool>
+

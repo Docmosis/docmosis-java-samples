@@ -1,0 +1,18 @@
+<!--
+*
+* This file is the configuration for the "DocmosisConfigFiles.java" example
+*
+* Define a group named "myConverters" which has one embedded converter.
+*
+-->
+
+<converter-pool defaultGroup="myConverters">
+
+  <group name="myConverters" description="Use one embedded converter" officeConverterClass="embedded">
+
+    <instance count="1"/>
+     
+  </group>
+
+</converter-pool>
+
